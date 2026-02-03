@@ -1,0 +1,3 @@
+MONGODB_HOST: mongodb.devopslab.fun
+REDIS_HOST: redis.devopslab.fun
+RABBITMQ_HOST: rabbitmq.devopslab.fun
