@@ -2,12 +2,16 @@
   ansible.builtin.import_role:
     name: common
     tasks_from: app-setup.yaml
- 
+
+  tags:
+    - deployment
 
 - name: copy mongo repo
   ansible.builtin.copy:
     src: mongo.repo
     dest: /etc/yum.repos.d/mongo.repo
+  tags:
+    - deployment  
 
 - name: install mongodb client
   ansible.builtin.package:
