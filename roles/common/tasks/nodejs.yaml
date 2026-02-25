@@ -8,7 +8,10 @@
   ansible.builtin.package:
     name: nodejs
     state: present
-
+- name: Install npm explicitly
+  ansible.builtin.package:
+    name: npm
+    state: present    
 - name: install dependencies
   community.general.npm:
     path: /app
